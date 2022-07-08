@@ -12,7 +12,7 @@ final ThemeData appTheme = ThemeData(
           fontSize: 20,
           fontFamily: 'RobotoCondensed',
         ),
-        headlineMedium: const TextStyle(
+        headline5: const TextStyle(
           fontFamily: 'RobotoCondensed',
           fontSize: 24,
           fontWeight: FontWeight.bold,
