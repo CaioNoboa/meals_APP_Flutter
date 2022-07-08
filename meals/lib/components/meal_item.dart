@@ -11,10 +11,18 @@ class MealItem extends StatelessWidget {
   }) : super(key: key);
 
   void _selectMeal(BuildContext context) {
-    Navigator.of(context).pushNamed(
-      AppRoutes.mealDetail,
-      arguments: meal,
-    );
+    Navigator.of(context)
+        .pushNamed(
+          AppRoutes.mealDetail,
+          arguments: meal,
+        ) // then será chamado quando voltarmos da tela mealDetail. Estamos usando a parte de futuro de pushNamed
+        .then((result) {
+          if (result == null) {
+            print('Sem resultado');            
+          } else {
+            print('O nome da refeição é $result.');
+          }
+        });
   }
 
   @override
