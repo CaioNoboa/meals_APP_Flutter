@@ -204,7 +204,7 @@ List<Meal> dummyMeals = [
     ],
     isGlutenFree: true,
     isVegan: false,
-    isVegetarian: true,
+    isVegetarian: false,
     isLactoseFree: true,
   ),
   Meal(
