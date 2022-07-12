@@ -51,13 +51,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
       drawer: const MainDrawer(),
       body: Column(
         children: <Widget>[
-          Container(
-            padding: const EdgeInsets.all(20),
-            child: Text(
-              'Configurações',
-              style: Theme.of(context).textTheme.headline6,
-            ),
-          ),
+          // Container(
+          //   padding: const EdgeInsets.all(20),
+          //   child: Text(
+          //     'Configurações',
+          //     style: Theme.of(context).textTheme.headline6,
+          //   ),
+          // ),
           Expanded(
             child: ListView(
               children: <Widget>[

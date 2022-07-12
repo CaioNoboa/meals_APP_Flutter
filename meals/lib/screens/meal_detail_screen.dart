@@ -23,10 +23,12 @@ class MealDetailScreen extends StatelessWidget {
     );
   }
 
-  Widget _createSectionContainer(Widget child) {
+  Widget _createSectionContainer(length, context, Widget child) {
     return Container(
-      height: 330,
-      width: 300,
+      constraints: BoxConstraints.expand(
+        height: Theme.of(context).textTheme.headline4!.fontSize! * 1.1 * length,
+      ),
+      width: double.infinity,
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
@@ -60,6 +62,8 @@ class MealDetailScreen extends StatelessWidget {
             ),
             _createSectionTitle(context, 'Ingredientes'),
             _createSectionContainer(
+              meal.ingredients.length,
+              context,
               ListView.builder(
                 itemCount: meal.ingredients.length,
                 itemBuilder: (context, index) {
@@ -78,6 +82,8 @@ class MealDetailScreen extends StatelessWidget {
             ),
             _createSectionTitle(context, 'Modo de preparo'),
             _createSectionContainer(
+              meal.steps.length * 2,
+              context,
               ListView.builder(
                 itemCount: meal.steps.length,
                 itemBuilder: (context, index) {
